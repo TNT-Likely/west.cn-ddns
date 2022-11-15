@@ -1,0 +1,30 @@
+{
+  "name": "west.cn-ddns",
+  "version": "1.0.0",
+  "description": "西部数码域名ddns解析",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "docker:build": "docker build . -t west.cn-ddns"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TNT-Likely/west.cn-ddns.git"
+  },
+  "keywords": [
+    "西部数码",
+    "域名",
+    "ddns"
+  ],
+  "author": "likely",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TNT-Likely/west.cn-ddns/issues"
+  },
+  "homepage": "https://github.com/TNT-Likely/west.cn-ddns#readme",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "node-schedule": "^2.1.0"
+  }
+}
