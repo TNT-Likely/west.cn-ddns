@@ -5,14 +5,16 @@ const tmpPath = path.resolve(__dirname, './config.tmp.js')
 const configPath = path.resolve(__dirname, './config.js')
 
 if (process.env.domainId) {
-    const { domainId, cookie, recitem, rectype, dingAccessToken, dingSecret } = process.env
+    const { domainId, cookie, recitem, rectype, dingAccessToken, dingSecret, name, password } = process.env
     module.exports = {
         domainId,
         cookie,
         recitem,
         rectype,
         dingAccessToken,
-        dingSecret
+        dingSecret,
+        password,
+        name
     }
 } else if (fs.existsSync(tmpPath)) {
     module.exports = require(tmpPath)

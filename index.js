@@ -8,14 +8,14 @@ const robot = new DingRobot()
 let lastIP = ''
 const jobFun = async () => {
     ip = await getIP().catch(e => {
-        return Promise.reject(`get publicip failed \n${JSON.stringify(e)}`)
+        return Promise.reject(`get publicip failed \n${e.toString()}`)
     })
 
     if (lastIP === ip) return ip
 
     await ddns(ip)
         .catch(e => {
-            return Promise.reject(`ddns failed: ${ip}\n ${JSON.stringify(e)}`)
+            return Promise.reject(`ddns failed: ${ip}\n ${e.toString()}`)
         })
     
     return ip
